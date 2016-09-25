@@ -2,6 +2,7 @@
     "name": "c5dev/concrete5-composer",
     "type": "project",
     "minimum-stability": "dev",
+    "license": "MIT",
     "authors": [
         {
             "name": "Oliver Green",
