@@ -15,13 +15,13 @@ $app = new Application();
  * ----------------------------------------------------------------------------
  */
 $app->detectEnvironment(
-    array(
-        'local' => array(
+    [
+        'local' => [
             'hostname',
-        ),
-        'production' => array(
+        ],
+        'production' => [
             'live.site',
-        ),
-    ));
+        ],
+    ]);
 
 return $app;
