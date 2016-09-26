@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46eef3e9408ee852d1c61f100a36de63",
-    "content-hash": "b8a381831b5588e71872e8b55aad6199",
+    "hash": "9f0275497cd36030b72c35c346600def",
+    "content-hash": "b1969ca32a242f6c8fd5446438b48a5e",
     "packages": [
         {
             "name": "anahkiasen/html-object",
@@ -47,158 +47,17 @@
             "time": "2015-03-04 17:12:08"
         },
         {
-            "name": "c5dev/boilerplate-package",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/c5labs/boilerplate-package.git",
-                "reference": "753c14302a3b0c578098747679d55dc774aa7f2d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/c5labs/boilerplate-package/zipball/753c14302a3b0c578098747679d55dc774aa7f2d",
-                "reference": "753c14302a3b0c578098747679d55dc774aa7f2d",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "concrete5-package",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Green",
-                    "email": "oliver@c5dev.com"
-                }
-            ],
-            "description": "A base to start building concrete5 packages from.",
-            "support": {
-                "source": "https://github.com/c5labs/boilerplate-package/tree/master",
-                "issues": "https://github.com/c5labs/boilerplate-package/issues"
-            },
-            "time": "2016-09-25 08:58:02"
-        },
-        {
-            "name": "composer/installers",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0"
-            },
-            "replace": {
-                "roundcube/plugin-installer": "*",
-                "shama/baton": "*"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Composer\\Installers\\Plugin",
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Installers\\": "src/Composer/Installers"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
-            "description": "A multi-framework Composer library installer",
-            "homepage": "https://composer.github.io/installers/",
-            "keywords": [
-                "Craft",
-                "Dolibarr",
-                "Hurad",
-                "ImageCMS",
-                "MODX Evo",
-                "Mautic",
-                "OXID",
-                "Plentymarkets",
-                "RadPHP",
-                "SMF",
-                "Thelia",
-                "WolfCMS",
-                "agl",
-                "aimeos",
-                "annotatecms",
-                "attogram",
-                "bitrix",
-                "cakephp",
-                "chef",
-                "cockpit",
-                "codeigniter",
-                "concrete5",
-                "croogo",
-                "dokuwiki",
-                "drupal",
-                "elgg",
-                "expressionengine",
-                "fuelphp",
-                "grav",
-                "installer",
-                "joomla",
-                "kohana",
-                "laravel",
-                "lithium",
-                "magento",
-                "mako",
-                "mediawiki",
-                "modulework",
-                "moodle",
-                "phpbb",
-                "piwik",
-                "ppi",
-                "puppet",
-                "reindex",
-                "roundcube",
-                "shopware",
-                "silverstripe",
-                "symfony",
-                "typo3",
-                "wordpress",
-                "yawik",
-                "zend",
-                "zikula"
-            ],
-            "time": "2016-08-13 20:53:52"
-        },
-        {
             "name": "concrete5/concrete5",
             "version": "dev-composer-fixes",
             "source": {
                 "type": "git",
                 "url": "https://github.com/olsgreen/concrete5.git",
-                "reference": "90f939232786b7ef2c420d69b3284560d2da5bd7"
+                "reference": "0b0f657085ac206ea93055367f8c251a332ed006"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/olsgreen/concrete5/zipball/90f939232786b7ef2c420d69b3284560d2da5bd7",
-                "reference": "90f939232786b7ef2c420d69b3284560d2da5bd7",
+                "url": "https://api.github.com/repos/olsgreen/concrete5/zipball/0b0f657085ac206ea93055367f8c251a332ed006",
+                "reference": "0b0f657085ac206ea93055367f8c251a332ed006",
                 "shasum": ""
             },
             "require": {
@@ -263,7 +122,7 @@
             "support": {
                 "source": "https://github.com/olsgreen/concrete5/tree/composer-fixes"
             },
-            "time": "2016-09-25 10:42:19"
+            "time": "2016-09-25 22:41:19"
         },
         {
             "name": "concrete5/doctrine-xml",
@@ -2056,12 +1915,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "dacec2fe1ead778f90d0149caa8f047a0856571b"
+                "reference": "ffc421a4fd4e9651e236341f5ff3994b25a8ecc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dacec2fe1ead778f90d0149caa8f047a0856571b",
-                "reference": "dacec2fe1ead778f90d0149caa8f047a0856571b",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/ffc421a4fd4e9651e236341f5ff3994b25a8ecc5",
+                "reference": "ffc421a4fd4e9651e236341f5ff3994b25a8ecc5",
                 "shasum": ""
             },
             "require": {
@@ -2126,7 +1985,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-09-18 16:07:11"
+            "time": "2016-09-25 14:47:31"
         },
         {
             "name": "natxet/CssMin",
@@ -2634,12 +2493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
+                "reference": "607ce1d4005af32dd866c4a402459494c168d555"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
-                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/607ce1d4005af32dd866c4a402459494c168d555",
+                "reference": "607ce1d4005af32dd866c4a402459494c168d555",
                 "shasum": ""
             },
             "require": {
@@ -2673,7 +2532,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-09-19 16:02:08"
+            "time": "2016-09-25 13:41:54"
         },
         {
             "name": "punic/punic",
@@ -3341,12 +3200,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "823e3784aa350a1c807d0c610e671d867c0a9b8a"
+                "reference": "8818eee2e3649ff2eb1f1526758f1379bba6826b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/823e3784aa350a1c807d0c610e671d867c0a9b8a",
-                "reference": "823e3784aa350a1c807d0c610e671d867c0a9b8a",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/8818eee2e3649ff2eb1f1526758f1379bba6826b",
+                "reference": "8818eee2e3649ff2eb1f1526758f1379bba6826b",
                 "shasum": ""
             },
             "require": {
@@ -3407,7 +3266,7 @@
             ],
             "description": "Symfony Serializer Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-24 15:57:00"
+            "time": "2016-09-25 16:21:58"
         },
         {
             "name": "symfony/translation",
@@ -3479,12 +3338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "7fbb0dfc86370757774ff2d9bd5c3b89c9aac1a8"
+                "reference": "ef38bb2d8e9341a7a052526330b0f6693fb95138"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/7fbb0dfc86370757774ff2d9bd5c3b89c9aac1a8",
-                "reference": "7fbb0dfc86370757774ff2d9bd5c3b89c9aac1a8",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/ef38bb2d8e9341a7a052526330b0f6693fb95138",
+                "reference": "ef38bb2d8e9341a7a052526330b0f6693fb95138",
                 "shasum": ""
             },
             "require": {
@@ -3526,7 +3385,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-20 08:33:13"
+            "time": "2016-09-25 16:21:58"
         },
         {
             "name": "tedivm/jshrink",
@@ -4653,8 +4512,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "concrete5/concrete5": 20,
-        "c5dev/boilerplate-package": 20
+        "concrete5/concrete5": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
