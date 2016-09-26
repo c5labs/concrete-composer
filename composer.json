@@ -9,19 +9,11 @@
             "email": "oliver@c5dev.com"
         }
     ],
-    "repositories": [
-    {
+    "repositories": [{
         "type": "vcs",
         "url": "https://github.com/olsgreen/concrete5.git"
-    },
-    {
-        "type": "vcs",
-        "url": "https://github.com/c5labs/boilerplate-package.git"
-    }
-    ],
+    }],
     "require": {
-        "composer/installers": "1.*",
         "concrete5/concrete5": "dev-composer-fixes",
-        "c5dev/boilerplate-package": "dev-master"
     }
 }
