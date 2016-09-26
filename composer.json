@@ -9,11 +9,13 @@
             "email": "oliver@c5dev.com"
         }
     ],
-    "repositories": [{
+    "repositories": [
+    {
         "type": "vcs",
         "url": "https://github.com/olsgreen/concrete5.git"
-    }],
+    }
+    ],
     "require": {
-        "concrete5/concrete5": "dev-composer-fixes",
+        "concrete5/concrete5": "dev-composer-fixes"
     }
 }
