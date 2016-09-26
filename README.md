@@ -10,7 +10,7 @@ Note that this is experimental at present, and will install v8.0.0-beta6 as well
 
 To install a fresh copy of concrete5 you run the following composer command:
 
-    composer create-project --prefer-dist c5dev/concrete5-composer my-site
+    composer create-project --prefer-dist c5dev/concrete5-composer my-site dev-master
     
 This will install concrete5 into a folder named 'my-site'.
 
