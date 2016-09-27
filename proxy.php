@@ -139,5 +139,7 @@ class ConcreteCoreProxy
                 die;
             }
         }
+
+        return false;
     }
 }
