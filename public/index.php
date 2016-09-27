@@ -14,7 +14,6 @@
  *
  * @link https://c5dev.com
  */
-
 require_once __DIR__.'/../bootstraps/proxy.php';
 
 /*
@@ -22,6 +21,7 @@ require_once __DIR__.'/../bootstraps/proxy.php';
  *  Initialize the proxy class with the $_SERVER vars.
  * ----------------------------------------------------------------------------
  */
+
 $proxy = new ConcreteCoreProxy($_SERVER);
 
 /*
@@ -30,6 +30,7 @@ $proxy = new ConcreteCoreProxy($_SERVER);
  * bootstrap which configures it to run as a composer dependency.
  * ----------------------------------------------------------------------------
  */
-if (! $proxy->handle()) {
+
+if (!$proxy->handle()) {
     require_once __DIR__.'/../bootstraps/start.php';
 }
