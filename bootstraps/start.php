@@ -38,7 +38,7 @@ ini_set('include_path', DIR_BASE.DIRECTORY_SEPARATOR.'vendor' . PATH_SEPARATOR .
  * Require the composer autoloaders
  * ----------------------------------------------------------------------------
  */
-require '../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 /*
  * ----------------------------------------------------------------------------
