@@ -1,8 +1,23 @@
 <?php
 /**
+ * Dispatcher
+ * 
  * This file replaces the concrete/dispatcher.php to bootstrap the CMS for 
- * use as a dependancy.
+ * use as a composer dependancy.
+ *
+ * @author   Oliver Green <oliver@c5dev.com>
+ * @license  See attached license file
+ * @link https://c5dev.com
  */
+
+/*
+ * ----------------------------------------------------------------------------
+ * We need to serve static concrete5 files from below the root, so we proxy 
+ * the requests to specfic files.
+ * ----------------------------------------------------------------------------
+ */
+require_once 'proxy.php';
+(new ConcreteCoreProxy($_SERVER))->handle();
 
 /*
  * ----------------------------------------------------------------------------
@@ -10,7 +25,7 @@
  * PHP < 5.3 and have it not die wholesale.
  * ----------------------------------------------------------------------------
  */
-$__DIR__ = 'vendor/concrete5/concrete5';
+$__DIR__ = '../vendor/concrete5/concrete5';
 
 /*
  * ----------------------------------------------------------------------------
@@ -18,20 +33,21 @@ $__DIR__ = 'vendor/concrete5/concrete5';
  * ----------------------------------------------------------------------------
  */
 defined('DIRNAME_CORE') or define('DIRNAME_CORE', $__DIR__.'/concrete');
+defined('DIR_BASE') or define('DIR_BASE', dirname(dirname($_SERVER['SCRIPT_FILENAME'])));
 
 /*
  * ----------------------------------------------------------------------------
  * Add the vendor path to the list of include paths
  * ----------------------------------------------------------------------------
  */
-ini_set('include_path', __DIR__.DIRECTORY_SEPARATOR.'vendor' . PATH_SEPARATOR . get_include_path());
+ini_set('include_path', DIR_BASE.DIRECTORY_SEPARATOR.'vendor' . PATH_SEPARATOR . get_include_path());
 
 /*
  * ----------------------------------------------------------------------------
  * Require the composer autoloaders
  * ----------------------------------------------------------------------------
  */
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 /*
  * ----------------------------------------------------------------------------
