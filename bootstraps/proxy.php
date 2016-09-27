@@ -2,10 +2,10 @@
 /**
  * Concrete5 Core Proxy.
  *
- * concrete directly references many resources within it's core directory. 
- * In an effort to enable the CMS to be used as a composer dependency and also 
- * improve security of the composer vendor directory, these resources have been 
- * moved outside of the 'public' webroot. This class proxies requests to 
+ * concrete directly references many resources within it's core directory.
+ * In an effort to enable the CMS to be used as a composer dependency and also
+ * improve security of the composer vendor directory, these resources have been
+ * moved outside of the 'public' webroot. This class proxies requests to
  * these resources.
  *
  * @author   Oliver Green <oliver@c5dev.com>
@@ -17,14 +17,14 @@ class ConcreteCoreProxy
 {
     /**
      * Instance of the request args.
-     * 
+     *
      * @var array
      */
     protected $request;
 
     /**
      * Base paths to proxy.
-     * 
+     *
      * @var arrya
      */
     protected $proxy_paths = [
@@ -35,17 +35,17 @@ class ConcreteCoreProxy
 
     /**
      * Custom mime types.
-     * 
+     *
      * @var array
      */
     protected $custom_mimes = ['css' => 'text/css'];
 
     /**
      * Constructor.
-     * 
+     *
      * @param array $request     $_SERVER
      * @param array $proxy_paths
-     * @param  array $custom_mimes 
+     * @param  array $custom_mimes
      */
     public function __construct($request, $proxy_paths = null, $custom_mimes = null)
     {
@@ -60,6 +60,11 @@ class ConcreteCoreProxy
         }
     }
 
+    /**
+     * Get the base path of the request.
+     *
+     * @return string
+     */
     public function getBasePath()
     {
         $path = dirname($this->request['SCRIPT_NAME']);
@@ -67,14 +72,21 @@ class ConcreteCoreProxy
         return '/' === $path ? '' : $path;
     }
 
-    public function translatePath($path)
+    /**
+     * Removes the base path from a uri.
+     *
+     * @param  srting $uri
+     *
+     * @return string
+     */
+    public function translateUri($uri)
     {
-        return str_replace($this->getBasePath(), '', $path);
+        return str_replace($this->getBasePath(), '', $uri);
     }
 
     /**
      * Get whether a request uri should be proxied.
-     * 
+     *
      * @param  string $request_uri
      *
      * @return bool
@@ -92,10 +104,10 @@ class ConcreteCoreProxy
 
     /**
      * Remove a query string from a string.
-     * 
-     * @param  string $uri 
      *
-     * @return string     
+     * @param  string $uri
+     *
+     * @return string
      */
     protected function removeQueryString($uri)
     {
@@ -106,7 +118,7 @@ class ConcreteCoreProxy
 
     /**
      * Detect a given paths MIME type.
-     * 
+     *
      * @param  string $path
      *
      * @return string
@@ -124,6 +136,8 @@ class ConcreteCoreProxy
 
     /**
      * Proxy the current request.
+     *
+     * @return  bool
      */
     public function handle()
     {
@@ -132,7 +146,7 @@ class ConcreteCoreProxy
         );
 
         if ($this->shouldProxy($request_uri)) {
-            $real_path = realpath('../'.$this->translatePath($request_uri));
+            $real_path = realpath('../'.$this->translateUri($request_uri));
             if (!is_dir($real_path) && is_readable($real_path)) {
                 header('Content-Type: '.$this->detectMime($real_path));
                 readfile($real_path);
