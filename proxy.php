@@ -60,6 +60,18 @@ class ConcreteCoreProxy
         }
     }
 
+    public function getBasePath()
+    {
+        $path = dirname($this->request['SCRIPT_NAME']);
+
+        return '/' === $path ? '' : $path;
+    }
+
+    public function translatePath($path)
+    {
+        return str_replace($this->getBasePath(), '', $path);
+    }
+
     /**
      * Get whether a request uri should be proxied.
      * 
@@ -70,7 +82,7 @@ class ConcreteCoreProxy
     protected function shouldProxy($request_uri)
     {
         foreach ($this->proxy_paths as $path) {
-            if ($path === substr($request_uri, 0, strlen($path))) {
+            if ($path === substr($request_uri, strlen($this->getBasePath()), strlen($path))) {
                 return true;
             }
         }
@@ -120,8 +132,7 @@ class ConcreteCoreProxy
         );
 
         if ($this->shouldProxy($request_uri)) {
-            $real_path = realpath('../'.$request_uri);
-
+            $real_path = realpath('../'.$this->translatePath($request_uri));
             if (!is_dir($real_path) && is_readable($real_path)) {
                 header('Content-Type: '.$this->detectMime($real_path));
                 readfile($real_path);
