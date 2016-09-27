@@ -1,12 +1,13 @@
 <?php
 /**
- * Dispatcher
+ * Dispatcher.
  * 
  * This file replaces the concrete/dispatcher.php to bootstrap the CMS for 
  * use as a composer dependancy.
  *
  * @author   Oliver Green <oliver@c5dev.com>
  * @license  See attached license file
+ *
  * @link https://c5dev.com
  */
 

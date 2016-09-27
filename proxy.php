@@ -10,6 +10,7 @@
  *
  * @author   Oliver Green <oliver@c5dev.com>
  * @license  See attached license file
+ *
  * @link https://c5dev.com
  */
 class ConcreteCoreProxy
@@ -63,6 +64,7 @@ class ConcreteCoreProxy
      * Get whether a request uri should be proxied.
      * 
      * @param  string $request_uri
+     *
      * @return bool
      */
     protected function shouldProxy($request_uri)
@@ -80,11 +82,13 @@ class ConcreteCoreProxy
      * Remove a query string from a string.
      * 
      * @param  string $uri 
+     *
      * @return string     
      */
     protected function removeQueryString($uri)
     {
         $parts = explode('?', $uri);
+
         return $parts[0];
     }
 
@@ -92,6 +96,7 @@ class ConcreteCoreProxy
      * Detect a given paths MIME type.
      * 
      * @param  string $path
+     *
      * @return string
      */
     protected function detectMime($path)
@@ -107,8 +112,6 @@ class ConcreteCoreProxy
 
     /**
      * Proxy the current request.
-     * 
-     * @return voidß
      */
     public function handle()
     {
@@ -119,10 +122,10 @@ class ConcreteCoreProxy
         if ($this->shouldProxy($request_uri)) {
             $real_path = realpath('../'.$request_uri);
 
-            if (! is_dir($real_path) && is_readable($real_path)) {
-                    header('Content-Type: '.$this->detectMime($real_path));
-                    readfile($real_path);
-                    die;
+            if (!is_dir($real_path) && is_readable($real_path)) {
+                header('Content-Type: '.$this->detectMime($real_path));
+                readfile($real_path);
+                die;
             }
         }
     }
