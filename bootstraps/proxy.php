@@ -41,13 +41,21 @@ class ConcreteCoreProxy
     protected $custom_mimes = ['css' => 'text/css'];
 
     /**
+     * File extensions we are allowed to proxy for.
+     */
+    protected $allowed_extensions = [
+        'css', 'js', 'png', 'jpg', 'svg', 'eot', 'woff2', 'woff', 'ttf',
+    ];
+
+    /**
      * Constructor.
      *
-     * @param array $request     $_SERVER
+     * @param array $request
      * @param array $proxy_paths
      * @param  array $custom_mimes
+     * @param  array $allowed_extensions
      */
-    public function __construct($request, $proxy_paths = null, $custom_mimes = null)
+    public function __construct($request, $proxy_paths = null, $custom_mimes = null, $allowed_extensions = null)
     {
         $this->request = $request;
 
@@ -57,6 +65,10 @@ class ConcreteCoreProxy
 
         if (is_array($custom_mimes)) {
             $this->custom_mimes = $custom_mimes;
+        }
+
+        if (is_array($allowed_extensions)) {
+            $this->allowed_extensions = $allowed_extensions;
         }
     }
 
@@ -79,23 +91,86 @@ class ConcreteCoreProxy
      *
      * @return string
      */
-    public function translateUri($uri)
+    protected function translateUri($uri)
     {
         return str_replace($this->getBasePath(), '', $uri);
     }
 
     /**
-     * Get whether a request uri should be proxied.
+     * Get a request_uris actual path in the filesystem.
      *
      * @param  string $request_uri
      *
+     * @return string
+     */
+    protected function getRealPath($request_uri)
+    {
+        return realpath(__DIR__.'/../'.$this->translateUri($request_uri));
+    }
+
+    /**
+     * Check that a requested URI actually exists in the filesystem.
+     *
+     * @param  string  $uri
+     *
      * @return bool
      */
-    protected function shouldProxy($request_uri)
+    protected function isValidFileUri($uri)
     {
-        foreach ($this->proxy_paths as $path) {
-            if ($path === substr($request_uri, strlen($this->getBasePath()), strlen($path))) {
+        $path = $this->getRealPath($uri);
+
+        return file_exists($path) && !is_dir($path) && is_readable($path);
+    }
+
+    /**
+     * Checks whether a URI has an allowed extension.
+     *
+     * @param  string  $request_uri
+     *
+     * @return bool
+     */
+    protected function hasAllowedExtension($request_uri)
+    {
+        $uri = $this->removeQueryString($request_uri);
+
+        foreach ($this->allowed_extensions as $extension) {
+            if (substr($uri, -strlen($extension)) === $extension) {
                 return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Get whether a request uri should be proxied.
+     *
+     * @param  string $uri
+     *
+     * @return bool
+     */
+    protected function shouldProxy($uri)
+    {
+        // Validate the file exists, is readable, is not a directory and has a valid extension.
+        if ($this->isValidFileUri($uri) && $this->hasAllowedExtension($uri)) {
+
+            // Check that the requested URI is within our allowed paths.
+            foreach ($this->proxy_paths as $path) {
+
+                // Extract the comparable part of the uri. If we're running in
+                // a sub-directory we remove that from the leading part of the uri. Then
+                // we take the same number characters from the start of the remaing uri
+                // portion as the number in the path we're checking it against.
+                $uri_base_path = substr(
+                    $uri,
+                    strlen($this->getBasePath()), // end of subdirectory (if any)
+                    strlen($path) // length of the current path we are checking
+                );
+
+                // If we have a match, we allow proxying of the path.
+                if ($path === $uri_base_path) {
+                    return true;
+                }
             }
         }
 
@@ -146,12 +221,10 @@ class ConcreteCoreProxy
         );
 
         if ($this->shouldProxy($request_uri)) {
-            $real_path = realpath('../'.$this->translateUri($request_uri));
-            if (!is_dir($real_path) && is_readable($real_path)) {
-                header('Content-Type: '.$this->detectMime($real_path));
-                readfile($real_path);
-                die;
-            }
+            $path = $this->getRealPath($request_uri);
+            header('Content-Type: '.$this->detectMime($path));
+            readfile($path);
+            die;
         }
 
         return false;
