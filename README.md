@@ -19,3 +19,17 @@ To update concrete5 to the latest development release you run (from within the '
     composer update
     
 As simple as that!
+
+## Going forward...
+
+The idea will be to mirror concrete releases via branches of this repository. This will enable creating a new project using the latest stable version like so:
+
+    composer create-project --prefer-dist c5dev/concrete5-composer my-site
+    
+upgrading to the latest stable version of concrete as simple as:
+
+    composer update
+    
+and installing a specific version like:
+
+    composer create-project --prefer-dist c5dev/concrete5-composer my-site 8.1.6
