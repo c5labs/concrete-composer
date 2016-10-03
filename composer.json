@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "concrete5/concrete5": "dev-master"
+        "concrete5/concrete5": "dev-develop"
     },
     "config": {
         "preferred-install": "dist"

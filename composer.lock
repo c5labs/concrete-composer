@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9f0275497cd36030b72c35c346600def",
-    "content-hash": "b1969ca32a242f6c8fd5446438b48a5e",
+    "hash": "ce2b838e37c360ff5f384218cea365f8",
+    "content-hash": "180fba856f657dc25ca3f75670a8a757",
     "packages": [
         {
             "name": "anahkiasen/html-object",
@@ -48,16 +48,16 @@
         },
         {
             "name": "concrete5/concrete5",
-            "version": "dev-composer-fixes",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/olsgreen/concrete5.git",
-                "reference": "0b0f657085ac206ea93055367f8c251a332ed006"
+                "url": "https://github.com/concrete5/concrete5.git",
+                "reference": "dfc9c85284411d09a6fb24f7b9785aab995db11f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/olsgreen/concrete5/zipball/0b0f657085ac206ea93055367f8c251a332ed006",
-                "reference": "0b0f657085ac206ea93055367f8c251a332ed006",
+                "url": "https://api.github.com/repos/concrete5/concrete5/zipball/dfc9c85284411d09a6fb24f7b9785aab995db11f",
+                "reference": "dfc9c85284411d09a6fb24f7b9785aab995db11f",
                 "shasum": ""
             },
             "require": {
@@ -110,19 +110,12 @@
                 "zendframework/zend-mail": "2.7.*"
             },
             "type": "library",
-            "autoload-dev": {
-                "psr-4": {
-                    "Concrete\\Tests\\": "../../tests/tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "concrete5 open source CMS",
-            "support": {
-                "source": "https://github.com/olsgreen/concrete5/tree/composer-fixes"
-            },
-            "time": "2016-09-25 22:41:19"
+            "time": "2016-09-29 19:31:34"
         },
         {
             "name": "concrete5/doctrine-xml",
@@ -1807,16 +1800,16 @@
         },
         {
             "name": "mlocati/concrete5-translation-library",
-            "version": "1.4.6",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mlocati/concrete5-translation-library.git",
-                "reference": "d95837dc6415095f19a6e97f1ded50471dde18b0"
+                "reference": "4daf7222e5b707cb562b169368d1ed50d5f5fafa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/concrete5-translation-library/zipball/d95837dc6415095f19a6e97f1ded50471dde18b0",
-                "reference": "d95837dc6415095f19a6e97f1ded50471dde18b0",
+                "url": "https://api.github.com/repos/mlocati/concrete5-translation-library/zipball/4daf7222e5b707cb562b169368d1ed50d5f5fafa",
+                "reference": "4daf7222e5b707cb562b169368d1ed50d5f5fafa",
                 "shasum": ""
             },
             "require": {
@@ -1853,7 +1846,7 @@
                 "translate",
                 "translation"
             ],
-            "time": "2016-08-18 07:48:13"
+            "time": "2016-10-03 10:32:13"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -1915,12 +1908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "ffc421a4fd4e9651e236341f5ff3994b25a8ecc5"
+                "reference": "7f135e9ed0d5c3b6102f3df5d5fd258c6b746afc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/ffc421a4fd4e9651e236341f5ff3994b25a8ecc5",
-                "reference": "ffc421a4fd4e9651e236341f5ff3994b25a8ecc5",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/7f135e9ed0d5c3b6102f3df5d5fd258c6b746afc",
+                "reference": "7f135e9ed0d5c3b6102f3df5d5fd258c6b746afc",
                 "shasum": ""
             },
             "require": {
@@ -1931,7 +1924,7 @@
                 "psr/log-implementation": "1.0.0"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "^2.4.9",
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
                 "jakub-onderka/php-parallel-lint": "0.9",
@@ -1985,7 +1978,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-09-25 14:47:31"
+            "time": "2016-09-29 07:29:30"
         },
         {
             "name": "natxet/CssMin",
@@ -2704,12 +2697,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "4724a3e34d28b523cc091086de77ab7aaf552f9b"
+                "reference": "03d010b5b2242ce065ffb0f3f15a218f8137eb4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/4724a3e34d28b523cc091086de77ab7aaf552f9b",
-                "reference": "4724a3e34d28b523cc091086de77ab7aaf552f9b",
+                "url": "https://api.github.com/repos/symfony/console/zipball/03d010b5b2242ce065ffb0f3f15a218f8137eb4c",
+                "reference": "03d010b5b2242ce065ffb0f3f15a218f8137eb4c",
                 "shasum": ""
             },
             "require": {
@@ -2759,7 +2752,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-24 15:57:00"
+            "time": "2016-09-28 00:11:20"
         },
         {
             "name": "symfony/debug",
@@ -2984,12 +2977,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "32b80cddcd78706f8508bd77df1807c7839a5407"
+                "reference": "5efe2dc077452527f50fb6e70cdc89bac9731128"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/32b80cddcd78706f8508bd77df1807c7839a5407",
-                "reference": "32b80cddcd78706f8508bd77df1807c7839a5407",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/5efe2dc077452527f50fb6e70cdc89bac9731128",
+                "reference": "5efe2dc077452527f50fb6e70cdc89bac9731128",
                 "shasum": ""
             },
             "require": {
@@ -3058,7 +3051,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-21 20:46:05"
+            "time": "2016-10-02 08:41:41"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3338,12 +3331,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "ef38bb2d8e9341a7a052526330b0f6693fb95138"
+                "reference": "f3abbc0c63c0c7803db79a7398bb983e5b089f53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/ef38bb2d8e9341a7a052526330b0f6693fb95138",
-                "reference": "ef38bb2d8e9341a7a052526330b0f6693fb95138",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f3abbc0c63c0c7803db79a7398bb983e5b089f53",
+                "reference": "f3abbc0c63c0c7803db79a7398bb983e5b089f53",
                 "shasum": ""
             },
             "require": {
@@ -3385,7 +3378,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-25 16:21:58"
+            "time": "2016-09-28 14:20:56"
         },
         {
             "name": "tedivm/jshrink",
