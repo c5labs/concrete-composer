@@ -52,12 +52,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/concrete5/concrete5.git",
-                "reference": "dfc9c85284411d09a6fb24f7b9785aab995db11f"
+                "reference": "d90e7af0f95d5107a3208de5d578237134ffef4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/concrete5/concrete5/zipball/dfc9c85284411d09a6fb24f7b9785aab995db11f",
-                "reference": "dfc9c85284411d09a6fb24f7b9785aab995db11f",
+                "url": "https://api.github.com/repos/concrete5/concrete5/zipball/d90e7af0f95d5107a3208de5d578237134ffef4e",
+                "reference": "d90e7af0f95d5107a3208de5d578237134ffef4e",
                 "shasum": ""
             },
             "require": {
@@ -79,7 +79,7 @@
                 "league/url": "3.3.*",
                 "lusitanian/oauth": "0.8.*",
                 "michelf/php-markdown": "1.*",
-                "mlocati/concrete5-translation-library": "1.*",
+                "mlocati/concrete5-translation-library": "1.5.*",
                 "mobiledetect/mobiledetectlib": "2.*",
                 "monolog/monolog": "1.*",
                 "natxet/cssmin": "3.*",
@@ -115,7 +115,7 @@
                 "MIT"
             ],
             "description": "concrete5 open source CMS",
-            "time": "2016-09-29 19:31:34"
+            "time": "2016-10-05 12:41:49"
         },
         {
             "name": "concrete5/doctrine-xml",
@@ -1548,12 +1548,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f2ccd52d8e8a271fb340f6636e01d24673e8087b"
+                "reference": "6d6136152c3d5ae7ab988d48bc9207f0d4c9c958"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f2ccd52d8e8a271fb340f6636e01d24673e8087b",
-                "reference": "f2ccd52d8e8a271fb340f6636e01d24673e8087b",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/6d6136152c3d5ae7ab988d48bc9207f0d4c9c958",
+                "reference": "6d6136152c3d5ae7ab988d48bc9207f0d4c9c958",
                 "shasum": ""
             },
             "require": {
@@ -1623,7 +1623,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-08-26 20:18:09"
+            "time": "2016-10-03 20:55:38"
         },
         {
             "name": "league/url",
@@ -1800,16 +1800,16 @@
         },
         {
             "name": "mlocati/concrete5-translation-library",
-            "version": "1.5.0",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mlocati/concrete5-translation-library.git",
-                "reference": "4daf7222e5b707cb562b169368d1ed50d5f5fafa"
+                "reference": "35ddaed7c9e90c7701e6ceece5088dd2f95cad51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/concrete5-translation-library/zipball/4daf7222e5b707cb562b169368d1ed50d5f5fafa",
-                "reference": "4daf7222e5b707cb562b169368d1ed50d5f5fafa",
+                "url": "https://api.github.com/repos/mlocati/concrete5-translation-library/zipball/35ddaed7c9e90c7701e6ceece5088dd2f95cad51",
+                "reference": "35ddaed7c9e90c7701e6ceece5088dd2f95cad51",
                 "shasum": ""
             },
             "require": {
@@ -1846,7 +1846,7 @@
                 "translate",
                 "translation"
             ],
-            "time": "2016-10-03 10:32:13"
+            "time": "2016-10-04 06:54:17"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -1908,12 +1908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "7f135e9ed0d5c3b6102f3df5d5fd258c6b746afc"
+                "reference": "214b8ef34b17ed0fcd3a5e027ef5a9ae9ebeb193"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/7f135e9ed0d5c3b6102f3df5d5fd258c6b746afc",
-                "reference": "7f135e9ed0d5c3b6102f3df5d5fd258c6b746afc",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/214b8ef34b17ed0fcd3a5e027ef5a9ae9ebeb193",
+                "reference": "214b8ef34b17ed0fcd3a5e027ef5a9ae9ebeb193",
                 "shasum": ""
             },
             "require": {
@@ -1978,7 +1978,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-09-29 07:29:30"
+            "time": "2016-10-03 18:31:30"
         },
         {
             "name": "natxet/CssMin",
@@ -2697,12 +2697,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "03d010b5b2242ce065ffb0f3f15a218f8137eb4c"
+                "reference": "db85798814c1aecf5449bcbed2f74a68862ff6fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/03d010b5b2242ce065ffb0f3f15a218f8137eb4c",
-                "reference": "03d010b5b2242ce065ffb0f3f15a218f8137eb4c",
+                "url": "https://api.github.com/repos/symfony/console/zipball/db85798814c1aecf5449bcbed2f74a68862ff6fa",
+                "reference": "db85798814c1aecf5449bcbed2f74a68862ff6fa",
                 "shasum": ""
             },
             "require": {
@@ -2752,7 +2752,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-28 00:11:20"
+            "time": "2016-10-05 09:03:40"
         },
         {
             "name": "symfony/debug",
@@ -2760,12 +2760,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "767b64d3c3346136403a39fe5bfc037e1a85bee7"
+                "reference": "61de4883414e3a640ffac1798d411a37dc71bc20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/767b64d3c3346136403a39fe5bfc037e1a85bee7",
-                "reference": "767b64d3c3346136403a39fe5bfc037e1a85bee7",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/61de4883414e3a640ffac1798d411a37dc71bc20",
+                "reference": "61de4883414e3a640ffac1798d411a37dc71bc20",
                 "shasum": ""
             },
             "require": {
@@ -2809,7 +2809,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-16 13:37:46"
+            "time": "2016-09-30 10:45:11"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -2977,12 +2977,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "5efe2dc077452527f50fb6e70cdc89bac9731128"
+                "reference": "402746c8dd74dfaca0994d2acd8a59e2a4df033f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/5efe2dc077452527f50fb6e70cdc89bac9731128",
-                "reference": "5efe2dc077452527f50fb6e70cdc89bac9731128",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/402746c8dd74dfaca0994d2acd8a59e2a4df033f",
+                "reference": "402746c8dd74dfaca0994d2acd8a59e2a4df033f",
                 "shasum": ""
             },
             "require": {
@@ -3051,7 +3051,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2016-10-02 08:41:41"
+            "time": "2016-10-05 13:10:21"
         },
         {
             "name": "symfony/polyfill-mbstring",
