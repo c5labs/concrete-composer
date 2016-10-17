@@ -1,12 +1,12 @@
 {
-    "name": "c5dev/concrete5-composer",
+    "name": "c5labs/concrete5-composer",
     "type": "project",
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
             "name": "Oliver Green",
-            "email": "oliver@c5dev.com"
+            "email": "oliver@c5labs.com"
         }
     ],
     "require": {
