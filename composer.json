@@ -9,6 +9,12 @@
             "email": "oliver@c5labs.com"
         }
     ],
+    "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/olsgreen/installers.git"
+    }
+    ],
     "require": {
         "concrete5/concrete5": "dev-develop"
     },
