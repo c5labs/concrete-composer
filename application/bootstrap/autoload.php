@@ -1,7 +1,4 @@
 <?php
-
-defined('C5_EXECUTE') or die('Access Denied.');
-
 /*
  * ----------------------------------------------------------------------------
  * Load all composer autoload items.
@@ -11,8 +8,8 @@ defined('C5_EXECUTE') or die('Access Denied.');
 // If the checker class is already provided, likely we have been included in a separate composer project
 if (!class_exists(\DoctrineXml\Checker::class)) {
     // Otherwise, lets try to load composer ourselves
-    if (!@include(DIR_BASE_CORE . '/' . DIRNAME_VENDOR . '/autoload.php')) {
-        echo 'Third party libraries not installed. Make sure that composer has required libraries in the concrete/ directory.';
+    if (!@include(realpath(__DIR__ . '/../../vendor/autoload.php'))) {
+        echo 'Third party libraries not installed. Ensure that you have installed the dependencies by running the composer install command.';
         die(1);
     }
 }
