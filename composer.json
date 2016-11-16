@@ -13,21 +13,35 @@
     {
         "type": "vcs",
         "url": "https://github.com/olsgreen/installers.git"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/olsgreen/concrete5.git"
+    },
+    {
+        "type": "path",
+        "url": "~/Sites/GitHub/c5labs/concrete5-core-installer"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/concrete5/less.php"
     }
     ],
     "require": {
-        "concrete5/concrete5": "dev-develop"
+        "composer/installers": "^1.0",
+        "c5labs/concrete5-core-installer": "*",
+        "concrete5/concrete5": "dev-core-type",
+        "c5labs/block-boilerplate": "dev-master"
     },
     "config": {
         "preferred-install": "dist"
     },
-    "scripts": {
-        "post-update-cmd": [
-            "php -r \"file_put_contents('vendor/concrete5/concrete5/.htaccess', 'Order Deny,Allow'.PHP_EOL.'Allow from All');\""
-        ],
-        "post-install-cmd": [
-            "php -r \"file_put_contents('vendor/.htaccess', 'Order Deny,Allow'.PHP_EOL.'Deny from All');\"",
-            "php -r \"file_put_contents('vendor/concrete5/concrete5/.htaccess', 'Order Deny,Allow'.PHP_EOL.'Allow from All');\""
-        ]
+    "extra": {
+        "installer-paths": {
+            "public/concrete": ["type:concrete5-core"],
+            "public/application/themes/{$name}": ["type:concrete5-theme"],
+            "public/packages/{$name}": ["type:concrete5-package"],
+            "public/application/blocks/{$name}": ["type:concrete5-block"]
+        }
     }
 }
