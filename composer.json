@@ -12,26 +12,16 @@
     "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/olsgreen/installers.git"
-    },
-    {
-        "type": "vcs",
         "url": "https://github.com/olsgreen/concrete5.git"
     },
     {
         "type": "path",
         "url": "~/Sites/GitHub/c5labs/concrete5-core-installer"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/concrete5/less.php"
     }
     ],
     "require": {
-        "composer/installers": "^1.0",
         "c5labs/concrete5-core-installer": "*",
-        "concrete5/concrete5": "dev-core-type",
-        "c5labs/block-boilerplate": "dev-master"
+        "concrete5/concrete5": "dev-core-type"
     },
     "config": {
         "preferred-install": "dist"
